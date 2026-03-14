@@ -1,0 +1,23 @@
+// Código da Switch Angel 
+
+// register("teste" , (x, pat) => pat.lpq(2).lpenv(x * 9).lps(.2).lpd(.12).lps(.2))
+
+setcpm(140/4)
+
+_$: n("<0 4 0 5 3 6>*16").scale("g:minor").s("sawtooth").trans(-12).lpf(800)
+
+_$: s("hh:2*16").gain(".3 .7")
+
+_$: n("[2 3 - - 5 6 - -] , <4 6 7 5>*4").scale("g:minor").s("piano")
+
+_$: s("bd*8").lpf(200)
+
+// =============================================
+
+// register('acidenv', (x, pat) => pat
+//   .lpf(100)           // Frequência base do filtro passa-baixa
+//   .lpenv(x * 9)       // Intensidade do envelope (modulada por x)
+//   .lps(.2)            // Tempo de ataque (sustain) do envelope
+//   .lpd(.12)           // Tempo de decaimento do envelope
+//   .lpq(2)             // Ressonância (Q)
+// )
