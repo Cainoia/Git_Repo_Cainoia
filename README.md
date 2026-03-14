@@ -1,4 +1,4 @@
-# 🚀 Comandos Git Essenciais
+Comandos Git Essenciais
 
 Configuração inicial:
 git config --global user.name "Seu Nome"              # Configura nome de usuário global
