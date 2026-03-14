@@ -1,162 +1,72 @@
-Git commands to remember
+# 🚀 Comandos Git Essenciais
 
-============================================================
+Configuração inicial:
+git config --global user.name "Seu Nome"              # Configura nome de usuário global
+git config --global user.email "seu@email.com"        # Configura email global
+git config --list                                      # Lista todas configurações atuais
+git config --global core.editor "code --wait"         # Define VS Code como editor padrão
 
-Configuração inicial
+Iniciar repositórios:
+git clone https://github.com/usuario/repositorio.git   # Clona repositório existente
+git clone https://github.com/usuario/repositorio.git minha-pasta  # Clona em pasta específica
+git init                                                # Inicia Git em projeto local
+git remote add origin https://github.com/usuario/repositorio.git  # Conecta local ao remoto
 
-# Configurar nome de usuário (global)
-git config --global user.name "Seu Nome"
+Trabalho diário:
+git status                                              # Verifica status das alterações
+git add arquivo.txt                                     # Adiciona arquivo específico
+git add .                                                # Adiciona todos arquivos modificados
+git add -A                                               # Adiciona todos (incluindo deletados)
+git commit -m "Mensagem"                                 # Commita com mensagem
+git commit -am "Mensagem"                                # Commit direto em arquivos rastreados
 
-# Configurar email (global)
-git config --global user.email "seu@email.com"
+Sincronização com GitHub:
+git push origin main                                     # Envia alterações para o GitHub
+git push -u origin main                                  # Primeiro push (configura upstream)
+git pull origin main                                     # Baixa alterações do GitHub
+git fetch origin                                         # Baixa alterações sem mesclar
+git remote -v                                            # Lista repositórios remotos
 
-# Verificar configurações
-git config --list
+Trabalhando com Branches:
+git branch                                               # Lista branches locais
+git branch -a                                            # Lista todas branches (locais/remotas)
+git branch nome-da-branch                                # Cria nova branch
+git checkout nome-da-branch                              # Muda para outra branch
+git checkout -b nome-da-branch                           # Cria e muda para nova branch
+git merge nome-da-branch                                 # Mescla branch atual com outra
+git branch -d nome-da-branch                             # Deleta branch local
+git push origin --delete nome-da-branch                  # Deleta branch remota
 
-# Configurar editor padrão
-git config --global core.editor "code --wait"
+Visualização e Histórico:
+git log                                                  # Mostra histórico de commits
+git log --oneline                                        # Histórico simplificado (1 linha/commit)
+git log --graph --oneline --all                          # Histórico com gráfico das branches
+git blame arquivo.txt                                    # Mostra quem modificou cada linha
+git diff                                                 # Mostra diferenças não commitadas
+git diff commit1..commit2                                 # Mostra diferenças entre commits
 
-=============================================================
+Desfazendo alterações:
+git reset HEAD arquivo.txt                               # Remove arquivo da área de stage
+git checkout -- arquivo.txt                              # Desfaz alterações no arquivo
+git reset --soft HEAD~1                                  # Desfaz último commit (mantém alterações)
+git reset --hard HEAD~1                                  # Desfaz último commit (perde alterações)
+git revert id-do-commit                                  # Cria novo commit desfazendo anterior
 
-Iniciar repositórios
+Tags e Releases:
+git tag v1.0.0                                           # Cria tag leve
+git tag -a v1.0.0 -m "Versão 1.0.0"                      # Cria tag anotada com mensagem
+git tag                                                   # Lista todas tags
+git push origin --tags                                   # Envia tags para o GitHub
 
-# Clonar um repositório existente
-git clone https://github.com/usuario/repositorio.git
+Comandos úteis do GitHub CLI (gh):
+gh repo view --web                                        # Abre repositório no navegador
+gh pr create                                              # Cria pull request
+gh pr list                                                # Lista pull requests
+gh repo view                                              # Verifica status do repositório
+gh repo clone usuario/repositorio                         # Clona com GitHub CLI
 
-# Clonar em uma pasta específica
-git clone https://github.com/usuario/repositorio.git minha-pasta
-
-# Iniciar Git em um projeto local
-git init
-
-# Conectar repositório local ao remoto
-git remote add origin https://github.com/usuario/repositorio.git
-
-=============================================================
-
-Trabalho diário
-
-# Verificar status das alterações
-git status
-
-# Adicionar arquivos específicos
-git arquivo.txt
-
-# Adicionar todos os arquivos modificados
-git add .
-
-# Adicionar todos os arquivos (incluindo deletados)
-git add -A
-
-# Commitar com mensagem
-git commit -m "Mensagem descritiva do que foi feito"
-
-# Commitar todos os arquivos rastreados diretamente
-git commit -am "Mensagem do commit"
-
-=============================================================
-
- Sincronização com GitHub
-
- # Enviar alterações para o GitHub
-git push origin main
-
-# Enviar e configurar upstream (primeiro push)
-git push -u origin main
-
-# Baixar alterações do GitHub
-git pull origin main
-
-# Baixar alterações sem mesclar (fetch)
-git fetch origin
-
-# Verificar repositórios remotos configurados
-git remote -v
-
-=============================================================
-
-Trabalhando com Branches
-
-# Listar branches locais
-git branch
-
-# Listar todas as branches (incluindo remotas)
-git branch -a
-
-# Criar nova branch
-git branch nome-da-branch
-
-# Mudar para outra branch
-git checkout nome-da-branch
-
-# Criar e mudar para nova branch
-git checkout -b nome-da-branch
-
-# Mesclar branch atual com outra
-git merge nome-da-branch
-
-# Deletar branch local
-git branch -d nome-da-branch
-
-# Deletar branch remota
-git push origin --delete nome-da-branch
-
-=============================================================
-
-Visualização e Histório
-
-# Ver histórico de commits
-git log
-
-# Ver histórico simplificado (uma linha por commit)
-git log --oneline
-
-# Ver histórico com gráfico das branches
-git log --graph --oneline --all
-
-# Ver quem modificou cada linha do arquivo
-git blame arquivo.txt
-
-# Ver diferenças não commitadas
-git diff
-
-# Ver diferenças entre commits
-git diff commit1..commit2
-
-=============================================================
-
-Desfazendo alterações
-
-# Remover arquivo da área de stage
-git reset HEAD arquivo.txt
-
-# Desfazer alterações em um arquivo (voltar ao último commit)
-git checkout -- arquivo.txt
-
-# Desfazer último commit (mantendo alterações)
-git reset --soft HEAD~1
-
-# Desfazer último commit (perdendo alterações)
-git reset --hard HEAD~1
-
-# Criar novo commit desfazendo um commit anterior
-git revert id-do-commit
-
-=============================================================
-
-Comandos úteis do Github CLI (gh)
-
-# Abrir repositório no navegador
-gh repo view --web
-
-# Criar pull request
-gh pr create
-
-# Listar pull requests
-gh pr list
-
-# Verificar status do repositório
-gh repo view
-
-# Clonar repositório com GitHub CLI
-gh repo clone usuario/repositorio
+Dicas rápidas:
+git help <comando>                                        # Mostra documentação do comando
+git stash                                                 # Salva alterações temporariamente
+git stash pop                                             # Recupera último stash
+git log --oneline -5                                      # Mostra últimos 5 commits
