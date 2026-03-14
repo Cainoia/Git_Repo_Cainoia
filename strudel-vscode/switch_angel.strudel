@@ -2,7 +2,7 @@
 
 // register("teste" , (x, pat) => pat.lpq(2).lpenv(x * 9).lps(.2).lpd(.12).lps(.2))
 
-setcpm(140/4)
+setcpm(120/4)
 
 _$: n("<0 4 0 5 3 6>*16").scale("g:minor").s("sawtooth").trans(-12).lpf(800)
 
