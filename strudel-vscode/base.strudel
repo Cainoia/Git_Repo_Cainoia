@@ -63,3 +63,4 @@
 // .speed() : acelera ou desacelera o ritmo, pode ser usado para mudar constatemente o ciclo .speed("<1 2 -1 -2>")
 // .fast()
 // .slow()
+// .range()

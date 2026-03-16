@@ -1,5 +1,7 @@
 def velocidade_carro():
-    x = int(input("Qual a velocidade atual do carro?"))
+
+    for i in range(1):
+        x = int(input("Qual a velocidade atual do carro?"))
 
     if x < 80:
         print("Tenha um bom dia! Dirija com segurança!")
