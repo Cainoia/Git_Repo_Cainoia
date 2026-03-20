@@ -71,7 +71,7 @@ git stash                                                 # Salva alterações t
 git stash pop                                             # Recupera último stash  
 git log --oneline -5                                      # Mostra últimos 5 commits  
 
-**Principais Prefixos (Tipos):**
+**Principais Prefixos (Tipos):**  
 feat: Nova funcionalidade (feature) para o usuário. 
 fix: Correção de um bug. 
 docs: Alterações na documentação (README, comentários). 
