@@ -70,3 +70,16 @@ git help <comando>                                        # Mostra documentaçã
 git stash                                                 # Salva alterações temporariamente  
 git stash pop                                             # Recupera último stash  
 git log --oneline -5                                      # Mostra últimos 5 commits  
+
+**Principais Prefixos (Tipos):**
+feat: Nova funcionalidade (feature) para o usuário.
+fix: Correção de um bug.
+docs: Alterações na documentação (README, comentários).
+style: Mudanças que não afetam o significado do código (formatação, ponto e vírgula, etc.).
+refactor: Alteração no código que não corrige bug nem adiciona funcionalidade.
+perf: Alteração que melhora o desempenho.
+test: Adição ou correção de testes.
+build: Mudanças que afetam o build ou dependências (npm, maven, gradle).
+ci: Configurações de Integração Contínua (Jenkins, GitHub Actions).
+chore: Atualização de tarefas de build, pacotes, etc. (sem alteração em código fonte).
+revert: Reversão de um commit anterior. 
