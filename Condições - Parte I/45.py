@@ -42,6 +42,7 @@ def jokenpo():
         print(f"Os dois escolheram {lista[2]}!\nVocês empataram!")
 
     print(f"A escolha do jogador foi {minha_escolha}")
+    
     print(f"A escolha do computador foi {computador}")
 
 jokenpo()

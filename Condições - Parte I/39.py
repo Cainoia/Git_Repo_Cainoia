@@ -1,5 +1,8 @@
 # Pensar melhor em como fazer, pois estou fazendo nas coxas já, sem usar dicionário nem lista nem tupla
 
+#from datetime import date
+#atual = date.today().year
+
 def alistamento():
 
     for i in range(1):
