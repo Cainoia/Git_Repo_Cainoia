@@ -1,10 +1,10 @@
 def frase():
 
-    frase = str(input("Digite uma frase: ")).lower().strip()
+    frase = str(input("Digite uma frase: ")).lower().strip() # strip() tira os espaços
 
-    palavras = frase.split()
+    palavras = frase.split()                                 # transforma a frase em uma lista
 
-    junto = "".join(palavras)
+    junto = "".join(palavras)                                # junto tudo tirando os espaços
 
     print(junto)
 
@@ -14,8 +14,15 @@ def frase():
 
         inverso += junto[i]
 
-        print(inverso)
+    print(inverso)
 
+    if inverso == junto:
+
+        print("É um palíndromo")
+    
+    else:
+
+        print("NÃO um palíndromo")
 
 
 
